@@ -4,7 +4,7 @@
         <!-- Primary theme color of the app (sets background color of app bar) -->
         <item name="colorPrimary">#A5D6A7</item>
         <!-- Background color of buttons in the app -->
-        <item name="colorButtonNormal">#B2EBF2</item>
+        <item name="colorButtonNormal">#A5D6A7</item>
     </style>
 
     <style name="Nest_layot">
