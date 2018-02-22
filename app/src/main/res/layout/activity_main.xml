@@ -1,0 +1,141 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Nest_layot">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/Main_linear">
+
+        <!-- Goals host team -->
+        <LinearLayout style="@style/Secondary_linear">
+
+            <TextView
+                style="@style/Team_text"
+                android:text="@string/host_team" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                style="@style/Result_text"
+                android:text="@string/start_result" />
+
+            <Button
+                style="@style/Buttons"
+                android:onClick="addGoalHost"
+                android:text="@string/goal_button" />
+
+            <!-- Aditional stats host team -->
+            <RelativeLayout style="@style/Stats_relative">
+
+                <TextView
+                    android:id="@+id/aditional_stats_text_h"
+                    style="@style/aditional_stats_text"
+                    android:text="@string/aditional_stats" />
+
+                <Button
+                    android:id="@+id/fautls_button_h"
+                    style="@style/secondary_buttons"
+                    android:layout_below="@id/aditional_stats_text_h"
+                    android:onClick="addFaultHost"
+                    android:text="@string/fauls_stats" />
+
+                <TextView
+                    android:id="@+id/faults_stat_h"
+                    style="@style/secondary_results_text"
+                    android:layout_below="@id/aditional_stats_text_h"
+                    android:layout_toRightOf="@id/fautls_button_h"
+                    android:text="@string/start_result" />
+
+                <Button
+                    android:id="@+id/shots_h"
+                    style="@style/secondary_buttons"
+                    android:layout_below="@id/fautls_button_h"
+                    android:onClick="addShotHost"
+                    android:text="@string/shots_stats" />
+
+                <TextView
+                    android:id="@+id/shots_stat_h"
+                    style="@style/secondary_results_text"
+                    android:layout_below="@id/faults_stat_h"
+                    android:layout_toRightOf="@id/shots_h"
+                    android:text="@string/start_result" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Goals visitor team -->
+        <LinearLayout style="@style/Secondary_linear">
+
+            <TextView
+                style="@style/Team_text"
+                android:text="@string/visitor_team" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                style="@style/Result_text"
+                android:text="@string/start_result" />
+
+            <Button
+                style="@style/Buttons"
+                android:onClick="addGoalVisitor"
+                android:text="@string/goal_button" />
+
+            <!-- Aditional stats visitor team-->
+            <RelativeLayout style="@style/Stats_relative">
+
+                <TextView
+                    android:id="@+id/aditional_stats_text_v"
+                    style="@style/aditional_stats_text"
+                    android:text="@string/aditional_stats" />
+
+                <Button
+                    android:id="@+id/fautls_button_v"
+                    style="@style/secondary_buttons"
+                    android:layout_below="@id/aditional_stats_text_v"
+                    android:onClick="addFaultsVisitor"
+                    android:text="@string/fauls_stats" />
+
+                <TextView
+                    android:id="@+id/faults_stat_v"
+                    style="@style/secondary_results_text"
+                    android:layout_below="@id/aditional_stats_text_v"
+                    android:layout_toRightOf="@id/fautls_button_v"
+                    android:text="@string/start_result" />
+
+                <Button
+                    android:id="@+id/shots_v"
+                    style="@style/secondary_buttons"
+                    android:layout_below="@id/fautls_button_v"
+                    android:onClick="addShotVisitor"
+                    android:text="@string/shots_stats" />
+
+                <TextView
+                    android:id="@+id/shots_stat_v"
+                    style="@style/secondary_results_text"
+                    android:layout_below="@id/faults_stat_v"
+                    android:layout_toRightOf="@id/shots_v"
+                    android:text="@string/start_result" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Reset button -->
+    <Button
+        android:id="@+id/dial"
+        style="@style/reset_button_style"
+        android:onClick="reset"
+        android:text="@string/reset_button" />
+
+</RelativeLayout>
+</ScrollView>
